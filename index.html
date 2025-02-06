@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+       
+    <meta charset="UTF-8">
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Удивительные животные</title>
+       
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+        <header>
+            <a id="start"></a>
+            <h1>Удивительные животные</h1>
+                <nav>
+                        <ul>
+                                <li><a href="#home">Главная</a></li>
+                                <li><a href="#about">Узнай больше</a></li>  
+                            </ul>
+                    </nav>
+            </header>
+        <main>
+                <section id="home">
+                <p>На нашей планете живёт множество удивительных животных.
+                        <br>Давайте узнаем о некоторых из них!</p>
+                <h2>Топ-5 интересных животных</h2>
+                <ul>
+                        <li>Кенгуру
+                                <img src="images/кенгуру.jpg" alt="Картинка кенгуру" width="194" height="182"
+                        title="это кенгуру" loading="lazy"><br>
+                            <img
+                        src="https://img.freepik.com/free-photo/free-kangaroo-in-the-wild_23-2151639143.jpg?w=740&t=st=1726416754~exp=1726417354~hmac=175b0920aea06df373245e22c2158df953d3d5797d727fe8f06201442f4414b5"
+                        srcset="https://img.freepik.com/free-photo/free-kangaroo-in-the-wild_23-2151639143.jpg?w=740&t=st=1726416754~exp=1726417354~hmac=175b0920aea06df373245e22c2158df953d3d5797d727fe8f06201442f4414b5 480w, https://img.freepik.com/free-photo/free-kangaroo-in-the-wild_23-2151639143.jpg?w=740&t=st=1726416754~exp=1726417354~hmac=175b0920aea06df373245e22c2158df953d3d5797d727fe8f06201442f4414b5 800w, https://img.freepik.com/free-photo/free-kangaroo-in-the-wild_23-2151639143.jpg?w=740&t=st=1726416754~exp=1726417354~hmac=175b0920aea06df373245e22c2158df953d3d5797d727fe8f06201442f4414b5 1200w"
+                        sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" alt="Картинка кенгуру"
+                        title="это кенгуру" loading="lazy">
+                            </li>
+                        <li>Дельфин
+                                <video
+                        src="https://videos.pexels.com/video-files/4328532/4328532-uhd_2560_1440_25fps.mp4" controls
+                        loop poster="images/дельфин.jpg" width="640" height="360">Видео не поддерживается
+                        браузером</video>
+                            </li>
+                       
+                        <li>Слон
+                                <audio controls loop>
+                                       
+                        <source src="audio/chudariki-veselyiy-slon.mp3" type="audio/mpeg">
+                                       
+                        <source src="audio/chudariki-veselyiy-slon.mp3" type="audio/ogg">
+                                       
+                        <source src="audio/chudariki-veselyiy-slon.mp3" type="audio/wav">
+                                        Ваш браузер не поддерживает аудиотег
+                                   
+                    </audio>            
+                            </li>
+                        <li>Панда
+                                <iframe                 src="https://www.youtube.com/embed/ZoeR9E-V94k"                
+                        width="560"                 height="315"                 frameborder="0"                
+                        allowfullscreen                 title="Встраиваемое видео">
+                                    </iframe>
+                            </li>
+                        <li>Тигр</li>
+                    </ul>
+        </section>
+        <section id="about">
+                <h2>Узнай больше!</h2>
+                <p>Хотите узнать больше о животных? Вот несколько полезных ссылок:</p>
+                <ul>
+                        <li><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B5%D0%BD%D0%B3%D1%83%D1%80%D1%83"
+                        target="_blank">Кенгуру на Википедии</a></li>
+                        <li><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D0%BD"
+                        target="_blank">Дельфины на Википедии</a></li>
+                        <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D0%BE%D0%BD" target="_blank">Слоны на
+                        Википедии</a></li>
+                        <li><a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BD%D0%B4%D0%B0" target="_blank">Панды
+                        на Википедии</a></li>
+                        <li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%B3%D1%80" target="_blank">Тигры на
+                        Википедии</a></li>
+                    </ul>
+                <h2>Заключение</h2>
+                <p>Животные — удивительные существа, и каждый из них уникален. Исследуйте мир животных и открывайте для
+                себя новое!</p>
+        </section>
+        <section>
+            <h2>Хотите прогулятся в галерею удивительного холодного оружия?</h2>
+            <img id="slider" srс="" alt="Изображение" width="194" height="182">
+            <br>
+            <button class="my_button" onclick="previousImage()">Предыдущие</button>
+            <button class="my_button" onclick="nextImage()">Следующее</button>
+            <script>
+            const images = [
+            'images/фламберг.jpg',
+            'images/цвайхандер.jpg',
+            'images/Кацбальгер.jpg',
+            'images/фальшион.jpg'
+            ];
+
+            let currentIndex = 0;
+
+
+            function updateImage(){
+                const slider = document.getElementById('slider');
+                slider.src = images[currentIndex];
+            }
+
+
+            function nextImage(){
+                currentIndex = (currentIndex + 1) % images.length;
+                updateImage();
+
+            }
+            function previousImage() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+
+                updateImage();
+            }
+             
+            updateImage();
+        </script>
+        <h2>Заключение</h2>
+        <p>Холодное оружие - удивительная тема. Каждый меч,нож каждый вид оружия уникален.</p>
+        </section>             
+        <aside>
+                <a href="./test_1.html">Внутренняя ссылка</a>
+                <br>
+                <a href="#start">Вернуться в начало</a>
+                <br>
+                <button class="my_button">Нажми на меня</button>
+        </aside>
+    </main>
+    <footer>
+            <p>Контактные данные о разработчике занимается IT хорошее направление </p>
+           
+    </footer>
+</body>
+
+</html>
